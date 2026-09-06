@@ -1,0 +1,27 @@
+{
+  "name": "blogmaker-subdirectory",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "wrangler deploy --dry-run --outdir dist",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": { "node": ">=22.0.0" },
+  "cloudflare": {
+    "bindings": {
+      "BLOGMAKER_ORIGIN": {
+        "description": "Copy **Blogmaker origin** from Blogmaker Settings → Domains and URLs → /subdirectory. This is your free Blogmaker address or the existing custom subdomain shown there, including https://."
+      },
+      "BLOG_URL": {
+        "description": "Copy **Public blog URL** from the same Blogmaker panel, including https:// and the subdirectory. After deploying, add the two Worker routes shown there."
+      }
+    }
+  },
+  "devDependencies": {
+    "miniflare": "5.20260903.0-alpha",
+    "wrangler": "4.129.0"
+  }
+}

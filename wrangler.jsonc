@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "blogmaker-subdirectory",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": true,
+  "vars": {
+    "BLOGMAKER_ORIGIN": "https://graymansurvivalists.bmaker.app",
+    "BLOG_URL": "https://graymansurvivalists.com/blog"
+  }
+}
